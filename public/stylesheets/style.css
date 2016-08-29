@@ -1,0 +1,70 @@
+body {
+    padding-top: 60px;
+    font: 14px 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+h4 {
+    color: #006699;
+    font-size: 22px;
+}
+
+p {
+    margin: 0 0 30px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    background-color: white;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+    background-color: white;
+}
+
+.navbar-default {
+    background-color: white;
+    border-color: white;
+}
+
+.box {
+    line-height: 1.2;
+    padding: 15px;
+    border: dotted;
+    margin: 50px;
+    font-size: 20px;
+}
+
+@media (min-width: 768px) {
+    .divContentCentered {
+        line-height: 70px;
+        text-align: center;
+    }
+}
+
+.padding-left-15 {
+    padding-left: 15px;
+}
+
+.centerInput {
+    text-align: center;
+}
+
+.drop-box {
+    background: #F8F8F8;
+    border: 5px dashed #DDD;
+    width: 200px;
+    height: 65px;
+    text-align: center;
+    padding-top: 25px;
+    margin: 10px;
+}
