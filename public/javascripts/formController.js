@@ -7,7 +7,6 @@ app.controller('SubmissionController', ['$scope', '$http', 'Upload', '$timeout',
 
         $scope.upload = function(files) {
 
-
             $http({
                 method: 'GET',
                 url: '/id'
@@ -20,23 +19,18 @@ app.controller('SubmissionController', ['$scope', '$http', 'Upload', '$timeout',
                         var file = files[i];
                         if (!file.$error) {
                             Upload.upload({
-                                url: '/uploads',
+                                url: '/submission',
                                 data: {
                                     email: $scope.email,
                                     id: id,
-                                    file: file
+                                    file: file,
+                                    type: 'smth'
                                 }
                             }).then(function(resp) {
-                                $timeout(function() {
-                                    $scope.log = 'file: ' + resp.config.data.file.name +
-                                        ', Response: ' + JSON.stringify(resp.data) +
-                                        '\n' + $scope.log;
-                                });
+                                console.log(resp);
                             }, null, function(evt) {
                                 var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-                                $scope.log = 'progress: ' + progressPercentage +
-                                    '% ' + evt.config.data.file.name + '\n' +
-                                    $scope.log;
+                                console.log(progressPercentage);
                             });
                         }
                     }

@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var uploads = require('./routes/uploads');
+var submission = require('./routes/submission');
 var downloads = require('./routes/downloads');
 
 var app = express();
@@ -24,7 +24,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/', uploads);
+app.use('/', submission);
 app.use('/', downloads);
 app.use('/about', function(req, res, next) {
     res.render('pages/about');
